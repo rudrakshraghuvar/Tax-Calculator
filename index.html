@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tax Calculator</title>
+</head>
+<body>
+    <div class="square-box" id="square">
+        <form id="myForm">
+            <label for="annual-income" class="input-label">
+                Enter gross annual income
+                <div class="tooltip">
+                    Gross annual income 
+                    is your total 
+                    salary in a year 
+                    before any deductions
+                </div>
+            </label>
+            <input type="text" id="annual-income" class="input-field" placeholder="Enter gross annual income">
+            <i class="error-icon icon1" id="myicon1">!
+                <div class="tooltip" id="newMessage">
+                    Please enter numbers only
+                </div>
+            </i>
+
+            <label for="extra-income" class="input-label">
+                Enter extra income
+                <div class="tooltip">Income from other sources or Bonus</div></label>
+            <input type="text" id="extra-income" class="input-field" placeholder="Enter extra income from other sources">
+            <i class="error-icon icon2" id="myicon2">!
+                <div class="tooltip">
+                    Please enter numbers only
+                </div>
+            </i>
+
+            <label for="age-group" class="input-label">
+                Enter age group
+                <div class="tooltip">Select the age group you belongs to</div>
+            </label>
+            <select id="age-group" class="input-field">
+                <option selected disabled value="">Select age group</option>
+                <option value="<40">&lt;40 </option>
+                <option value=">=40&<60"> ≥40 &amp; &lt;60 </option>
+                <option value=">=60"> ≥60</option>
+            </select>
+            <i class="error-icon icon3" id="myicon3">!
+                <div class="tooltip">
+                    Input field is mandatory
+                </div>
+            </i>
+
+            <label for="name" class="input-label">
+                Enter total applicable deductions
+                <div class="tooltip">Provident Fund, House rent allowance, Travel, Health Insurance, etc.</div>
+            </label>
+            <input type="text" id="deduction" class="input-field" placeholder="Add total applicable deductions">
+            <i class="error-icon icon4" id="myicon4">!
+                <div class="tooltip">
+                    Please enter numbers only
+                </div>
+            </i>
+
+            <button type="submit" class="submit-btn" value="Submit">Submit</button>
+        </form>
+    </div>
+    <div id="result" class="square-box-1">
+        <h2 style="margin-top:90px;">Your overall income will be</h2>
+        <h3 id="h3">12000</h3>
+        <h4>after tax deductions</h4>
+        <button type="close" onclick="closeFunc()" class="close-btn">Close</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
